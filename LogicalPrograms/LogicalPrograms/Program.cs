@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the program number which is to be executed \n 1. Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Exit");
+                Console.WriteLine("Enter the program number which is to be executed \n 1. Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Coupan Number, \n 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,12 @@ namespace LogicalPrograms
                         rev.Reverse();
                         break;
                     case 5:
+                        Console.Write("How many numbers you wants to generate :");
+                        int N = Convert.ToInt32(Console.ReadLine());
+                        CoupanNumber cn = new CoupanNumber();
+                        cn.Calculation(N);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
