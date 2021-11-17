@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the program number which is to be executed \n 1. Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Coupan Number, \n 6.Exit");
+                Console.WriteLine("Enter the program number which is to be executed \n 1. Fibonacci Series \n 2.Perfect Number \n 3.Prime Number \n 4.Reverse a Number \n 5.Coupan Number, \n 6.Stopwatch Program, \n 7. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +36,10 @@ namespace LogicalPrograms
                         cn.Calculation(N);
                         break;
                     case 6:
+                        Simulate sl = new Simulate();
+                        sl.Calculate();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
